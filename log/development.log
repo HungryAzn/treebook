@@ -1,0 +1,134 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-25 06:25:09 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (6.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStatuses (20140325113228)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140325113228"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-25 06:38:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 18ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/status" for 127.0.0.1 at 2014-03-25 06:38:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/status"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/Ruby200-x64/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby200-x64/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby200-x64/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (44.0ms)
+
+
+Started GET "/statuses" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.0ms)[0m  SELECT "statuses".* FROM "statuses"
+  Rendered statuses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 431ms (Views: 428.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 06:38:55 -0500
+
+
+Started GET "/statuses/new" for 127.0.0.1 at 2014-03-25 06:41:03 -0500
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (13.0ms)
+  Rendered statuses/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/statuses" for 127.0.0.1 at 2014-03-25 06:41:08 -0500
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9wVVzdix/fZg3aIxq1tDkjfh/QGVwK2CGS/EkN6l/NE=", "status"=>{"name"=>"dennis", "content"=>"i'm on treebook\r\n"}, "commit"=>"Create Status"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["content", "i'm on treebook\r\n"], ["created_at", Tue, 25 Mar 2014 11:41:08 UTC +00:00], ["name", "dennis"], ["updated_at", Tue, 25 Mar 2014 11:41:08 UTC +00:00]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/statuses/1
+Completed 302 Found in 29ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/statuses/1" for 127.0.0.1 at 2014-03-25 06:41:08 -0500
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStatus Load (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered statuses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-25 06:41:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-25 06:41:09 -0500
+
+
+Started GET "/assets/statuses.js?body=1" for 127.0.0.1 at 2014-03-25 06:41:09 -0500
+
+
+Started GET "/assets/statuses.css?body=1" for 127.0.0.1 at 2014-03-25 06:41:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-25 06:41:09 -0500
+
+
+Started GET "/statuses" for 127.0.0.1 at 2014-03-25 06:41:18 -0500
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses"[0m
+  Rendered statuses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
